@@ -1,0 +1,457 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(26, 96, 78, 110);
+    font-family: "DM Sans", sans-serif;
+}
+
+.titulo-logo {
+        position: relative;
+        text-align: center; /* Centra el texto horizontalmente */
+}
+
+/* ajustes del banner texto y titulo del seccion 1 */
+
+.banner-section{
+    width: 100%; /* Puedes ajustar esto según tus necesidades */
+    height: 400px; /* Altura fija para el contenedor */
+    overflow: hidden; /* Oculta las partes de la imagen que se salen del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+
+}
+.background-section {
+    width: 100%;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    background-image: url('../assets/imagenes/frentetractor\ ocaso.jpeg'); /* Carga la imagen de fondo */
+    background-size: cover; /* La imagen cubre todo el contenedor */
+    background-position: center; /* La imagen se centra en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    position: relative; /* Permite posicionar elementos hijos de manera absoluta */
+}
+.background-section div{
+    display: grid;
+}
+.overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para oscurecer la imagen */
+}
+
+.title-overlay {
+    color: white; /* Color del título */
+    font-size: 3rem; /* Tamaño del título */
+    text-align: center; /* Alineación centrada del título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+.text-overlay{
+    color: white; /* Color del título */
+    font-size: 1.5rem; /* Tamaño del título *
+    text-align: center; /* Alineación centrada del título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    padding: 5%;
+
+}
+
+/* Estilos básicos para la página */
+.navbar-toggler:hover{
+    background-color: #006e2e;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que el navbar esté por encima del resto del contenido */
+    background-color: #000000; /* Color de fondo del navbar */
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: flex-end; /* Alinea los elementos del navbar a la derecha */
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgb(51, 51, 51); /* Color de fondo del navbar con transparencia */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar el color de fondo */
+}
+
+.navbar.transparent {
+    background-color: rgba(51, 51, 51, 0.904); /* Navbar transparente */
+}
+
+
+.nav-item {
+    margin-right: 20px; /* Espacio entre los elementos del navbar */
+}
+
+.nav-link {
+    color: rgb(78, 160, 91); /* Color del texto del navbar */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    padding: 10px 15px; /* Espaciado interno de los enlaces */
+    transition: all 0.3s ease; /* Transición suave al cambiar propiedades */
+    border-radius: 5%;
+    font-size: 18px;
+    
+}
+
+.nav-link:hover {
+    color: whitesmoke ; /* Cambia el color del texto al pasar el cursor */
+    background-color: #006e2e;
+}
+
+/* Estilo para las secciones                                  */
+.section {
+    padding: 60px;
+    height: 100vh;
+}
+
+#inicio {
+    background-color: #f1f1f1;
+}
+
+#servicios {
+    background-color: #e2e2e2;
+}
+
+#nosotros {
+    background-color: #d3d3d3;
+}
+
+#contacto {
+    background-color: #c4c4c4;
+}
+
+
+/* Estilo para la sección de contacto */
+.contact-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Formulario de contacto */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, textarea, button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #575757;
+}
+
+.contact-form .form-control, .contact-form .form-control-file {
+    margin-bottom: 15px;
+}
+
+.contact-section {
+    padding: 40px 0;
+}
+
+.contact-form {
+    margin-bottom: 20px;
+}
+
+
+.img-contenedor {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.img-text {
+    font-family: 'DM Sans", sans-serif';
+    font-size: larger;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -30%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -10%);
+    }
+}
+
+.form-control-file{
+    width: 50%;
+}
+.btn{
+    background-color: #006e2e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+}
+.btn:hover{
+    background-color: #005c2e;
+    color: whitesmoke;
+}
+
+/* Información de contacto
+.contact-info {
+    margin-bottom: 40px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+/* Mapa interactivo
+.map-container {
+    margin-bottom: 40px;
+}
+
+iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+} */
+
+/* Estilos responsivos 
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 40px 10px;
+    }
+
+    .contact-form, .contact-info, .business-hours, .social-links {
+        margin-bottom: 30px;
+    }
+
+    iframe {
+        height: 300px;
+    }
+    .img-text, img.img-fluid{
+        display: hidden;
+    }
+} */
+
+
+
+/* Estilos para la sección de servicios *//* Estilos para la sección de servicios */
+#servicios {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+#servicios .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#servicios .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#servicios .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#servicios .col {
+    flex: 1 1 calc(33.333% - 20px);
+    margin-bottom: 20px;
+}
+
+#servicios .card {
+    position: relative;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#servicios .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+#servicios .card-body {
+    padding: 10px;
+    margin: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#servicios .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#servicios .card-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+#servicios .btn-servicios {
+    background-color: #006e2e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+}
+
+#servicios .btn-servicios:hover {
+    background-color:#005c2e;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    #servicios .col {
+        flex: 1 1 100%;
+    }
+}
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Ajustar altura del artículo con ID inicio */
+    #inicio {
+        height: 100vh; /* Altura igual a la altura de la ventana */
+    }
+
+    /* Ajustar altura del artículo con ID servicios */
+    #servicios {
+        height: auto; /* Altura automática */
+        padding-top: 20px; /* Espaciado superior */
+        padding-bottom: 20px; /* Espaciado inferior */
+    }
+
+    /* Ajustar altura del artículo con ID nosotros */
+    #nosotros {
+        height: auto; /* Altura automática */
+        padding-top: 20px; /* Espaciado superior */
+        padding-bottom: 20px; /* Espaciado inferior */
+    }
+
+    /* Ajustar altura del artículo con ID contacto */
+    #contacto {
+        height: auto; /* Altura automática */
+        padding-top: 20px; /* Espaciado superior */
+        padding-bottom: 20px; /* Espaciado inferior */
+    }
+}
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Ajustar altura del artículo con ID info-contacto */
+    #info-contacto {
+        margin-bottom: 100px; /* Espacio adicional en la parte inferior */
+    }
+
+    /* Ajustar posición del footer */
+    footer {
+        position: relative;
+        top: 300px;
+        bottom: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
+
+
+.title-overlay {
+    font-size: 5em; /* Adjust font size as needed */
+    color: #017c01;
+    animation: fadeInText 3s ease-out forwards;
+}
+
+.text-overlay {
+    font-size: 1.2em; /* Adjust font size as needed */
+    text-align: center;
+    animation: fadeInText 2s ease-out 2s forwards; /* Delay animation to start after title */
+    opacity: 0;
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
